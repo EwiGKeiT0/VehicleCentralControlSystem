@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>nodes.txt</file>
+        <file>nodes_new.txt</file>
+    </qresource>
+</RCC>
