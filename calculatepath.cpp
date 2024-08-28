@@ -86,7 +86,7 @@ CalculatePath::CalculatePath() {
             continue;
         }
 
-        qDebug() << realid << x << y;  // 打印读取的值
+        // qDebug() << realid << x << y;  // 打印读取的值
 
             id++;
             nodecont++;

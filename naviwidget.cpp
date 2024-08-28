@@ -91,16 +91,6 @@ void NaviWidget::setGradient(QWidget *a, QColor start, QColor end, int duration,
     QObject::connect(color, &ColorGradient::gradientChanged, a,
                      [a, color,extra]
                      {
-        // qDebug()<<QString("background-color:rgba("+
-        //                     QString::number(color->getCurrent().red())+","+
-        //                     QString::number(color->getCurrent().green())+","+
-        //                     QString::number(color->getCurrent().blue())+","+
-        //                     QString::number(color->getCurrent().alpha())+");"+
-        //                     "color:rgba("+
-        //                     QString::number(255-color->getCurrent().red())+","+
-        //                     QString::number(255-color->getCurrent().green())+","+
-        //                     QString::number(255-color->getCurrent().blue())+","+
-        //                     QString::number(color->getCurrent().alpha())+");");
                          a->setStyleSheet("background-color:rgba("+
                                           QString::number(color->getCurrent().red())+","+
                                           QString::number(color->getCurrent().green())+","+
@@ -447,7 +437,7 @@ void NaviWidget::on_searchBtn_clicked()
 void NaviWidget::sendSurroundingRequest(double x,double y)
 {
 
-    QString akk = QString("%1").arg(ak);
+    QString akk = QString("%1").arg(ak2);
 
     // 服务地址
     QString host = "http://api.map.baidu.com";

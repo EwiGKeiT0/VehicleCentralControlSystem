@@ -12,6 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -28,6 +30,12 @@ public:
     QLabel *nameText;
     QSpacerItem *verticalSpacer_8;
     QLabel *infoText;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QLineEdit *lineEdit;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout_2;
 
     void setupUi(QWidget *browserWidget)
     {
@@ -84,6 +92,24 @@ public:
 
         verticalLayout->addLayout(verticalLayout_3);
 
+        pushButton = new QPushButton(mainWidget);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(370, 60, 90, 55));
+        pushButton_2 = new QPushButton(mainWidget);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(460, 60, 90, 55));
+        pushButton_3 = new QPushButton(mainWidget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(550, 60, 90, 55));
+        lineEdit = new QLineEdit(mainWidget);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(650, 60, 411, 55));
+        verticalLayoutWidget = new QWidget(mainWidget);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(0, 150, 1111, 541));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
 
         retranslateUi(browserWidget);
 
@@ -94,7 +120,10 @@ public:
     {
         browserWidget->setWindowTitle(QCoreApplication::translate("browserWidget", "Form", nullptr));
         nameText->setText(QCoreApplication::translate("browserWidget", "\346\265\217\350\247\210\345\231\250", nullptr));
-        infoText->setText(QCoreApplication::translate("browserWidget", "\350\277\231\346\230\257\346\265\217\350\247\210\345\231\250\350\277\231\346\230\257\346\265\217\350\247\210\345\231\250\350\277\231\346\230\257\346\265\217\350\247\210\345\231\250", nullptr));
+        infoText->setText(QString());
+        pushButton->setText(QCoreApplication::translate("browserWidget", "back", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("browserWidget", "forward", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("browserWidget", "reload", nullptr));
     } // retranslateUi
 
 };

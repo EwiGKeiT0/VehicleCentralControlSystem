@@ -35,7 +35,7 @@ QPointF PainterWidget::mapPoint(double x, double y) {
     // qDebug()<<width()<<height();
 
     // 计算映射后的X坐标
-    double X = X1 + (X2 - X1)*(x - x1) / (x2 - x1)*262/242*150.0/147.0-60*width()/1898-dx/0.001*54*width()/1898;
+    double X = X1 + (X2 - X1)*(x - x1) / (x2 - x1)*262/242*150.0/147.0-60*width()/1898-dx/0.001*54*width()/1898+7;
     // 计算映射后的Y坐标
     double Y = Y1 +  (Y2 - Y1)* ((y2-y)/ (y2 - y1))-30*height()/873+dy/0.001*45*height()/873;
 

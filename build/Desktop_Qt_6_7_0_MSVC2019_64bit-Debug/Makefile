@@ -430,9 +430,16 @@ Makefile: E:\BIT_SoftwareEngineering\MediaPlayer\MediaPlayer.pro E:\QT\QT_main\6
 		E:\BIT_SoftwareEngineering\MediaPlayer\MediaPlayer.pro \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Charts.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineWidgets.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6PrintSupport.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Widgets.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineCore.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Quick.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGL.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Gui.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6QmlModels.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebChannel.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Qml.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Network.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Positioning.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Core.prl \
@@ -445,9 +452,16 @@ Makefile: E:\BIT_SoftwareEngineering\MediaPlayer\MediaPlayer.pro E:\QT\QT_main\6
 		E:\BIT_SoftwareEngineering\MediaPlayer\citycode.qrc \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Chartsd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgetsd.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineWidgetsd.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6PrintSupportd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Widgetsd.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineCored.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Quickd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Guid.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6QmlModelsd.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebChanneld.prl \
+		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Qmld.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Networkd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Positioningd.prl \
 		E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Cored.prl \
@@ -799,9 +813,16 @@ E:\QT\QT_main\6.7.0\msvc2019_64\mkspecs\features\lex.prf:
 E:\BIT_SoftwareEngineering\MediaPlayer\MediaPlayer.pro:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Charts.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineWidgets.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6PrintSupport.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Widgets.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineCore.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Quick.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGL.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Gui.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6QmlModels.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebChannel.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Qml.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Network.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Positioning.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Core.prl:
@@ -814,9 +835,16 @@ E:\BIT_SoftwareEngineering\MediaPlayer\text.qrc:
 E:\BIT_SoftwareEngineering\MediaPlayer\citycode.qrc:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Chartsd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgetsd.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineWidgetsd.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6PrintSupportd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Widgetsd.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebEngineCored.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Quickd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6OpenGLd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Guid.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6QmlModelsd.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6WebChanneld.prl:
+E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Qmld.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Networkd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Positioningd.prl:
 E:\QT\QT_main\6.7.0\msvc2019_64\lib\Qt6Cored.prl:

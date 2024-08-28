@@ -75,6 +75,7 @@ private:
     void init();
     //baidu App key
     QString ak="yYSnHDIgAbSRlyktehYXmvlzA0s3eEhX";
+    QString ak2="CDE9axcE8tPnZZRLiPdgK8IIsXOJ77a3";
     //存储当前主机ip
     QString currentIp;
     //经度
