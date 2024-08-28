@@ -7,7 +7,6 @@
 #include<QPointF>
 #include<qpair.h>
 #include <QMouseEvent>
-#include<naviwidget.h>
 using namespace std;
 class PainterWidget : public QWidget {
     Q_OBJECT
