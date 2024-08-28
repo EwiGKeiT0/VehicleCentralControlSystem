@@ -56,3 +56,4 @@ RESOURCES += \
     qss.qrc \
     resources.qrc \
     text.qrc
+    resources.qrc
