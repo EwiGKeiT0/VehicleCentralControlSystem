@@ -1,0 +1,259 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: E:/VisualStudio/VC/Tools/MSVC/14.37.32822/bin/HostX64/x64/cl.exe 
+      Build flags: -DQT_QML_DEBUG
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.37.32822 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.37.32822.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ui1a8o"
+      binary: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ui1a8o"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ui1a8o'
+        
+        Run Build Command(s): E:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_56fae
+        [1/2] E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_56fae.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_56fae.dir\\ /FS -c E:\\QT\\QT_main\\Tools\\CMake_64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_56fae.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_56fae.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_56fae.exe /implib:cmTC_56fae.lib /pdb:cmTC_56fae.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': E:/VisualStudio/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "E:/VisualStudio/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.37.32822.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:122 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ir82wm"
+      binary: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ir82wm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ir82wm'
+        
+        Run Build Command(s): E:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_2230b
+        [1/2] E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2230b.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_2230b.dir\\ /FS -c E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ir82wm\\src.cxx
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_2230b.dir/src.cxx.obj 
+        E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2230b.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_2230b.dir\\ /FS -c E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ir82wm\\src.cxx
+        E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ir82wm\\src.cxx(1): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:122 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-dq5yov"
+      binary: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-dq5yov"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-dq5yov'
+        
+        Run Build Command(s): E:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_68362
+        [1/2] E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_68362.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_68362.dir\\ /FS -c E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dq5yov\\CheckFunctionExists.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_68362.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_68362.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_68362.exe /implib:cmTC_68362.lib /pdb:cmTC_68362.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        \x1b[31mFAILED: \x1b[0mcmTC_68362.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_68362.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_68362.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_68362.exe /implib:cmTC_68362.lib /pdb:cmTC_68362.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_68362.dir\\CheckFunctionExists.cxx.obj /out:cmTC_68362.exe /implib:cmTC_68362.lib /pdb:cmTC_68362.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_68362.dir/intermediate.manifest CMakeFiles\\cmTC_68362.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib”\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:122 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-c60igg"
+      binary: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-c60igg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-c60igg'
+        
+        Run Build Command(s): E:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_b3d3b
+        [1/2] E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b3d3b.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_b3d3b.dir\\ /FS -c E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-c60igg\\CheckFunctionExists.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b3d3b.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b3d3b.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_b3d3b.exe /implib:cmTC_b3d3b.lib /pdb:cmTC_b3d3b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        \x1b[31mFAILED: \x1b[0mcmTC_b3d3b.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b3d3b.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b3d3b.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_b3d3b.exe /implib:cmTC_b3d3b.lib /pdb:cmTC_b3d3b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b3d3b.dir\\CheckFunctionExists.cxx.obj /out:cmTC_b3d3b.exe /implib:cmTC_b3d3b.lib /pdb:cmTC_b3d3b.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b3d3b.dir/intermediate.manifest CMakeFiles\\cmTC_b3d3b.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib”\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "E:/QT/QT_main/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rw3wg1"
+      binary: "E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rw3wg1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/QT/QT_main/6.7.0/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/BIT_SoftwareEngineering/Weather/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rw3wg1'
+        
+        Run Build Command(s): E:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_fbb25
+        [1/2] E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DHAVE_STDATOMIC  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_fbb25.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_fbb25.dir\\ /FS -c E:\\BIT_SoftwareEngineering\\Weather\\build\\Desktop_Qt_6_7_0_MSVC2019_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rw3wg1\\src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\QT\\QT_main\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_fbb25.dir --rc="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="E:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- E:\\VisualStudio\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fbb25.dir\\src.cxx.obj  /out:cmTC_fbb25.exe /implib:cmTC_fbb25.lib /pdb:cmTC_fbb25.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+...

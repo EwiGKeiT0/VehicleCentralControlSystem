@@ -1,5 +1,8 @@
 #include "widget.h"
-
+#include <QCoreApplication>
+#include <QGeoPositionInfoSource>
+#include <QGeoPositionInfo>
+#include <QDebug>
 #include <QApplication>
 
 int main(int argc, char *argv[])

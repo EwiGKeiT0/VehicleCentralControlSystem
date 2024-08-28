@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui network charts
 QT+=positioning
 QMAKE_PROJECT_DEPTH = 0
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -21,6 +21,7 @@ SOURCES += \
     naviwidget.cpp \
     painterWidget.cpp \
     settingwidget.cpp \
+    weatherdata.cpp \
     widget.cpp
 
 HEADERS += \
@@ -35,6 +36,7 @@ HEADERS += \
     naviwidget.h \
     painterWidget.h \
     settingwidget.h \
+    weatherdata.h \
     widget.h
 
 FORMS += \
@@ -55,5 +57,6 @@ RESOURCES += \
     images.qrc \
     qss.qrc \
     resources.qrc \
-    text.qrc
+    text.qrc \
+    citycode.qrc \
     resources.qrc

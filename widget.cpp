@@ -133,7 +133,6 @@ void Widget::paintEvent(QPaintEvent *event)
 void Widget::mousePressEvent(QMouseEvent *event)
 {
     dragPosition=event->globalPos()-frameGeometry().topLeft();
-
 }
 
 void Widget::mouseMoveEvent(QMouseEvent *event)

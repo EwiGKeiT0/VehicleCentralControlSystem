@@ -13,11 +13,35 @@
         <file>setting.png</file>
         <file>setting1.png</file>
         <file>back.png</file>
+     	<file>search.png</file>
     </qresource>
     <qresource prefix="/profile">
         <file>profile1.png</file>
         <file>profile2.png</file>
         <file>profile3.png</file>
         <file>myprofile.png</file>
+        <file>search.png</file>
+    </qresource>
+    <qresource prefix="/pic">
+        <file>wind.png</file>
+        <file>pm25.png</file>
+        <file>wet.png</file>
+        <file>quality.png</file>
+        <file>type/qing.png</file>
+        <file>type/duoyun.png</file>
+        <file>type/yin.png</file>
+        <file>weizhi.png</file>
+        <file>type/dayu.png</file>
+        <file>type/leizhenyu.png</file>
+        <file>type/zhongyu.png</file>
+        <file>type/xiaoyu.png</file>
+        <file>type/daxue.png</file>
+        <file>type/xiaoxue.png</file>
+        <file>type/zhongxue.png</file>
+        <file>type/yujiaxue.png</file>
+        <file>type/wu.png</file>
+    </qresource>
+    <qresource prefix="/cityname">
+        <file>cityname.txt</file>
     </qresource>
 </RCC>

@@ -18,6 +18,15 @@
 {
 	border-radius: 10px;
 	border:none;
+}
+#searchbox
+{
+	border-radius:25px;
+	color:white;
+}
+#querybutton
+{
+	border-radius:25px;
 }</string>
   </property>
   <widget class="QWidget" name="tabWidget" native="true">
