@@ -13,6 +13,8 @@
 #include<calculatepath.h>
 #include <QUrlQuery>
 #include<qpair.h>
+#include<hovereventfilter.h>
+#include<colorgradient.h>
 namespace Ui {
 class NaviWidget;
 }
@@ -27,6 +29,7 @@ public:
     ~NaviWidget();
     CalculatePath* calcRes;
 
+    void setGradient(QWidget *a, QColor start, QColor end, int duration, QString extra="");
 private slots:
     //处理获取外网ip请求的 槽
     void onGetIp(QNetworkReply*);
@@ -109,6 +112,8 @@ private:
     void sendMapRequest();
     //过滤事件
     bool eventFilter(QObject *watched, QEvent *event);
+
+    double pathLength=0.0;
 
 
 };

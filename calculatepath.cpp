@@ -194,6 +194,7 @@ double CalculatePath::findPath(double stx, double sty, double enx, double eny,bo
     vector<pair<double,double>>res_temp;
     if(needclear){
         rawRes.clear();
+        rawResDistance.clear();
     }
     bool isstValid=0;
     bool isenValid=0;
@@ -263,14 +264,17 @@ double CalculatePath::findPath(double stx, double sty, double enx, double eny,bo
     }
     int cur=enid;
     res_temp.push_back(id2realpos[cur]);
+    rawResDistance.push_back(dis[cur]);
     double ans=0.0;
     if(isenValid){
         res_temp.push_back(id2realpos[cur]);
+        rawResDistance.push_back(dis[cur]);
     }
     qDebug()<<"path:";
     while(cur!=stid){
 
         res_temp.push_back(id2realpos[pre[cur]]);
+        rawResDistance.push_back(dis[pre[cur]]);
         if(pre[cur]){
             ans+=calcDistance(id2realpos[cur],id2realpos[pre[cur]],1);
             assert(calcDistance(id2realpos[cur],id2realpos[pre[cur]])<eps);
@@ -282,6 +286,7 @@ double CalculatePath::findPath(double stx, double sty, double enx, double eny,bo
     }
     if(cur==stid&&isstValid){
         res_temp.push_back(id2realpos[cur]);
+        rawResDistance.push_back(dis[cur]);
     }
 
     rep(i,1,nodecont){

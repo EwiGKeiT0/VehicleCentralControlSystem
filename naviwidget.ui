@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>NaviWidget</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget" native="true">
    <property name="geometry">
     <rect>
@@ -22,82 +25,98 @@
      <height>800</height>
     </rect>
    </property>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLineEdit" name="edit_search">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>40</x>
       <y>0</y>
-      <width>1001</width>
-      <height>801</height>
+      <width>251</width>
+      <height>40</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout" columnstretch="5,0,0,0">
-     <item row="0" column="2">
-      <widget class="QPushButton" name="enlargeBtn">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLineEdit" name="edit_search"/>
-     </item>
-     <item row="1" column="0" colspan="4">
-      <widget class="PainterWidget" name="mapWidget" native="true">
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>75</width>
-          <height>40</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>选择起点</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>0</y>
-          <width>75</width>
-          <height>40</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>选择终点</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>0</y>
-          <width>221</width>
-          <height>40</height>
-         </rect>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="searchBtn">
-       <property name="text">
-        <string>搜索</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="reduceBtn">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
+   <widget class="QTextBrowser" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>431</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>0</y>
+      <width>75</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择起点</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>0</y>
+      <width>75</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择终点</string>
+    </property>
+   </widget>
+   <widget class="PainterWidget" name="mapWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>40</y>
+      <width>980</width>
+      <height>750</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="enlargeBtn">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>0</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>放大</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reduceBtn">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>0</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>缩小</string>
+    </property>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>enlargeBtn</zorder>
+   <zorder>reduceBtn</zorder>
+   <zorder>edit_search</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

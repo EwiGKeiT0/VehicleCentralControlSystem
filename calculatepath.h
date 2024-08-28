@@ -13,6 +13,7 @@ public:
     void appendMapPoint(double x, double y);
     QString parseRawRes2Qstring();
     vector<pair<double,double>>rawRes;
+    vector<double>rawResDistance;
     vector<vector<pair<double,double>>>rawLines;
     vector<vector<pair<double,double>>>rawBorders;
     vector<pair<double,double>>rawMapPoints;

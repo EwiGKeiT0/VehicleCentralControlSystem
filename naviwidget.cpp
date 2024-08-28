@@ -63,7 +63,56 @@
 
 //     getIp();
 // }
+void NaviWidget::setGradient(QWidget *a, QColor start, QColor end, int duration,QString extra)
+{
+    /* 渐变颜色 */
+    ColorGradient *color = new ColorGradient(start, end);
+    /* 设置动画 */
+    QPropertyAnimation *animation = new QPropertyAnimation(color, "gradient");
+    animation->setDuration(duration);
+    animation->setStartValue(0);
+    animation->setEndValue(1);
+    /* 设置hover的事件过滤器 */
+    HoverEventfilter* filter = new HoverEventfilter(this, animation);
+    a->installEventFilter(filter);
 
+    a->setStyleSheet("background-color:rgba("+
+                     QString::number(start.red())+","+
+                     QString::number(start.green())+","+
+                     QString::number(start.blue())+","+
+                     QString::number(start.alpha())+");"+
+                     "color:rgba("+
+                     QString::number(255-start.red())+","+
+                     QString::number(255-start.green())+","+
+                     QString::number(255-start.blue())+","+
+                     QString::number(start.alpha())+");"+extra);
+
+    /* 将渐变值更改的信号链接上修改颜色的槽 */
+    QObject::connect(color, &ColorGradient::gradientChanged, a,
+                     [a, color,extra]
+                     {
+        // qDebug()<<QString("background-color:rgba("+
+        //                     QString::number(color->getCurrent().red())+","+
+        //                     QString::number(color->getCurrent().green())+","+
+        //                     QString::number(color->getCurrent().blue())+","+
+        //                     QString::number(color->getCurrent().alpha())+");"+
+        //                     "color:rgba("+
+        //                     QString::number(255-color->getCurrent().red())+","+
+        //                     QString::number(255-color->getCurrent().green())+","+
+        //                     QString::number(255-color->getCurrent().blue())+","+
+        //                     QString::number(color->getCurrent().alpha())+");");
+                         a->setStyleSheet("background-color:rgba("+
+                                          QString::number(color->getCurrent().red())+","+
+                                          QString::number(color->getCurrent().green())+","+
+                                          QString::number(color->getCurrent().blue())+","+
+                                          QString::number(color->getCurrent().alpha())+");"+
+                         "color:rgba("+
+                         QString::number(255-color->getCurrent().red())+","+
+                         QString::number(255-color->getCurrent().green())+","+
+                         QString::number(255-color->getCurrent().blue())+","+
+                         QString::number(color->getCurrent().alpha())+");"+extra);
+                     });
+}
 NaviWidget::NaviWidget(QWidget *parent, Widget *father)
     : QWidget(parent)
     , ui(new Ui::NaviWidget)
@@ -79,6 +128,14 @@ NaviWidget::NaviWidget(QWidget *parent, Widget *father)
         qssFile.close();
     }
     ui->setupUi(this);
+    ui->lineEdit->setAlignment(Qt::AlignCenter);
+    setGradient(ui->lineEdit,QColor(192, 192, 192),QColor(58,58,60),DURATION,"font-size: 20px;");
+    setGradient(ui->edit_search,QColor(192, 192, 192),QColor(58,58,60),DURATION,"font-size: 20px;");
+    setGradient(ui->pushButton,QColor(58,58,60),QColor(192, 192, 192),DURATION);
+    setGradient(ui->pushButton_2,QColor(58,58,60),QColor(192, 192, 192),DURATION);
+    setGradient(ui->enlargeBtn,QColor(58,58,60),QColor(192, 192, 192),DURATION);
+    setGradient(ui->reduceBtn,QColor(58,58,60),QColor(192, 192, 192),DURATION);
+
     calcRes =  new CalculatePath ();
 
     int randindex1 = rand()%(calcRes->nodecont)+1;
@@ -112,11 +169,21 @@ void NaviWidget::pop_path_front()
 {
     qDebug()<<"update rawRes";
     if(!(this->calcRes->rawRes.empty())){
-        qDebug()<<calcRes->rawRes.size();
+        // qDebug()<<calcRes->rawRes.size();
         this->calcRes->rawRes.pop_back();
-        qDebug()<<calcRes->rawRes.size();
-        if(calcRes->rawRes.size())
-        sendSurroundingRequest(calcRes->rawRes.back().first,calcRes->rawRes.back().second);
+        this->calcRes->rawResDistance.pop_back();
+        // qDebug()<<calcRes->rawRes.size();
+        if(calcRes->rawRes.size()){
+            sendSurroundingRequest(calcRes->rawRes.back().first,calcRes->rawRes.back().second);
+            if(pathLength!=-1){
+                double leftDistance = pathLength-calcRes->rawResDistance.back()/1000.0;
+                if(leftDistance>0.001)
+                ui->lineEdit->setText(QString("路线长度为:%1KM").arg(leftDistance));
+                else{
+                    ui->lineEdit->setText(QString("已到达目的地附近！").arg(leftDistance));
+                }
+            }
+        }
     }
     // double prob = QRandomGenerator::global()->generateDouble();
     // if(prob<0.05&&calcRes->rawRes.size()){
@@ -137,13 +204,13 @@ void NaviWidget::pop_path_front()
             ui->mapWidget->isMouseStartPointSet=0;
             QPair<double,double> stp= ui->mapWidget->mapRealPos(ui->mapWidget->mouseStartPoint.first,ui->mapWidget->mouseStartPoint.second);
             QPair<double,double> enp= ui->mapWidget->mapRealPos(ui->mapWidget->mouseEndPoint.first,ui->mapWidget->mouseEndPoint.second);
-            double ans = calcRes->findPath(stp.first,stp.second,
+            pathLength = calcRes->findPath(stp.first,stp.second,
                               enp.first,enp.second);
-            if(ans==-1){
+            if(pathLength==-1){
                 ui->lineEdit->setText(QString("寻路失败！"));
             }
             else{
-                ui->lineEdit->setText(QString("路线长度为%1KM").arg(ans));
+                ui->lineEdit->setText(QString("路线长度为:%1KM").arg(pathLength));
             }
         }
     ui->mapWidget->setPath(calcRes->rawRes);
@@ -429,7 +496,7 @@ void NaviWidget::sendSurroundingRequest(double x,double y)
                 QJsonObject firstResult = jsonarray[0].toObject();  // 将 QJsonValue 转换为 QJsonObject
                 QString name = firstResult.value("name").toString();  // 获取 "name" 字段的字符串值
                 qDebug() << "Name:" << name;
-                ui->edit_search->setText(name);
+                ui->edit_search->setText("当前位于:"+name);
 
             }
             else{
@@ -491,6 +558,12 @@ bool  NaviWidget::eventFilter(QObject *watched, QEvent *event){
 //    qDebug()<<event->type()<<endl;
     if(event->type()==QEvent::MouseButtonPress){
         qDebug()<<event->type()<< cursor().pos().x()<<":"<<cursor().pos().y()<<endl;
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        QPointF globalPosition = mouseEvent->globalPos();
+        QPointF position = this->mapFromGlobal(globalPosition);
+        if(position.x()>1000||position.y()<40){
+            return QWidget::eventFilter(watched,event);
+        }
         isPress=true;
         startPoint.setX(cursor().pos().x());
         startPoint.setY(cursor().pos().y());
@@ -498,11 +571,17 @@ bool  NaviWidget::eventFilter(QObject *watched, QEvent *event){
 
     if(event->type()==QEvent::MouseButtonRelease){
         qDebug()<<event->type()<< cursor().pos().x()<<":"<<cursor().pos().y()<<endl;
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        QPointF globalPosition = mouseEvent->globalPos();
+        QPointF position = this->mapFromGlobal(globalPosition);
+        if(position.x()>1000||position.y()<40){
+            return QWidget::eventFilter(watched,event);
+        }
         isRelease=true;
         endPoint.setX(cursor().pos().x());
         endPoint.setY(cursor().pos().y());
     }
-
+qDebug()<<event->type()<<endl;
     if(isPress&&isRelease){
         isPress=false;
         isRelease=false;
@@ -527,12 +606,14 @@ bool  NaviWidget::eventFilter(QObject *watched, QEvent *event){
 
 void NaviWidget::on_pushButton_clicked()
 {
+    qDebug()<<"pushButtonClicked";
     ui->mapWidget->isMouseSetting=1;
 }
 
 
 void NaviWidget::on_pushButton_2_clicked()
 {
+    qDebug()<<"pushButton2Clicked";
     ui->mapWidget->isMouseSetting=2;
 }
 
