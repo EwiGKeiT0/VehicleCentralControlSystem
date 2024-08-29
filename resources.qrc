@@ -1,0 +1,65 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>back.png</file>
+        <file>browser.png</file>
+        <file>browser1.png</file>
+        <file>chat.png</file>
+        <file>chat1.png</file>
+        <file>index.png</file>
+        <file>index1.png</file>
+        <file>media.png</file>
+        <file>media1.png</file>
+        <file>navi.png</file>
+        <file>navi1.png</file>
+        <file>search.png</file>
+        <file>setting.png</file>
+        <file>setting1.png</file>
+        <file>leftIcon.png</file>
+        <file>leftIcon.svg</file>
+        <file>musicEntry.png</file>
+        <file>pauseIcon.png</file>
+        <file>pictureEntry.png</file>
+        <file>playIcon.png</file>
+        <file>playIcon.svg</file>
+        <file>rightIcon.svg</file>
+        <file>videoEntry.png</file>
+        <file>inBack.png</file>
+        <file>flowEntry.png</file>
+    </qresource>
+    <qresource prefix="/profile">
+        <file>profile0.png</file>
+        <file>profile1.png</file>
+        <file>profile2.png</file>
+        <file>profile3.png</file>
+        <file>profile4.png</file>
+        <file>profile5.png</file>
+        <file>search.png</file>
+    </qresource>
+    <qresource prefix="/pic">
+        <file>pm25.png</file>
+        <file>quality.png</file>
+        <file>type/daxue.png</file>
+        <file>type/dayu.png</file>
+        <file>type/duoyun.png</file>
+        <file>type/leizhenyu.png</file>
+        <file>type/qing.png</file>
+        <file>type/wu.png</file>
+        <file>type/xiaoxue.png</file>
+        <file>type/xiaoyu.png</file>
+        <file>type/yin.png</file>
+        <file>type/yujiaxue.png</file>
+        <file>type/zhongxue.png</file>
+        <file>type/zhongyu.png</file>
+        <file>weizhi.png</file>
+        <file>wet.png</file>
+        <file>wind.png</file>
+    </qresource>
+    <qresource prefix="/cityname">
+        <file>cityname.txt</file>
+    </qresource>
+    <qresource prefix="/playList">
+        <file>musicPlayList.txt</file>
+        <file>picturePlayList.txt</file>
+        <file>videoPlayList.txt</file>
+    </qresource>
+</RCC>
