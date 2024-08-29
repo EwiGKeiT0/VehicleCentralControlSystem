@@ -506,12 +506,15 @@ void indexWidget::parse_weatherdata2(QString targetSite) {
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     QNetworkRequest request;
 
+
+
     // QString citycode = get_citycode();
     // QString link = "http://t.weather.itboy.net/api/weather/city/";
     // QString url = link+citycode;
 
     request.setUrl(QUrl(targetSite));
     QNetworkReply *reply = manager->get(request);
+
 
     connect(reply, &QNetworkReply::readyRead, [=](){
         //1.获取数据二进制数组
@@ -546,6 +549,7 @@ void indexWidget::parse_weatherdata2(QString targetSite) {
         QString parent_city_name = cityinfo_json["parent"].toString();
         qDebug() << parent_city_name;
         qDebug() << city_name;
+        ui->searchbox->setText(city_name);
 
         //4.获取日期
         QString pre_date = jsonObj["date"].toString();

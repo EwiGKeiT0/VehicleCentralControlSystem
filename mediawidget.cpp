@@ -11,7 +11,9 @@ QString mediaUrl=""; //文件路径
 int mediaMode=0; //播放模式，0:音乐,1:视频,2:图片
 QString mediaUrls[2005];
 int playListContent=0;
-
+void mediaWidget::onSearch(const QString &url){
+    startStream(url);
+}
 mediaWidget::mediaWidget(QWidget *parent,Widget *father)
     : QWidget(parent)
     , ui(new Ui::mediaWidget)

@@ -69,6 +69,11 @@ Widget::Widget(QWidget *parent)
     ui->mainWidget->addWidget(settingWidget);
 
     // connect(this->browserWidget,&browserWidget::messageReceived,this->indexWidget,&indexWidget::parse_weatherdata2);
+    // connect(this->browserWidget,&browserWidget::messageReceived,this->mediaWidget,&mediaWidget::onSearch);
+    connect(this->browserWidget,&browserWidget::weatherReceived,this->indexWidget,&indexWidget::parse_weatherdata2);
+    connect(this->browserWidget,&browserWidget::weatherReceived,this,&Widget::gotoPage2);
+    connect(this->browserWidget,&browserWidget::videoUrlReceived,this->mediaWidget,&mediaWidget::onSearch);
+    connect(this->browserWidget,&browserWidget::videoUrlReceived,this,&Widget::gotoPage4);
 
     pushPage(0);
     button[0]->setPixmap(pixmap[0][1]);
@@ -78,6 +83,31 @@ Widget::Widget(QWidget *parent)
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::gotoPage0(QString x)
+{
+    pushPage(0);
+}
+void Widget::gotoPage1(QString x)
+{
+    pushPage(1);
+}
+void Widget::gotoPage2(QString x)
+{
+    pushPage(2);
+}
+void Widget::gotoPage3(QString x)
+{
+    pushPage(3);
+}
+void Widget::gotoPage4(QString x)
+{
+    pushPage(4);
+}
+void Widget::gotoPage5(QString x)
+{
+    pushPage(5);
 }
 
 // TabBuilder控制器

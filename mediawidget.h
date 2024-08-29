@@ -2,7 +2,7 @@
 #define MEDIAWIDGET_H
 
 #include <QWidget>
-#include "widget.h"
+// #include "widget.h"
 #include <qpixmap.h>
 #include <QEvent>
 #include<qmessagebox.h>
@@ -25,7 +25,7 @@
 namespace Ui {
     class mediaWidget;
 }
-
+    class Widget;
 class mediaWidget : public QWidget
 {
     Q_OBJECT
@@ -35,6 +35,7 @@ protected:
 public slots:
     void startStream(const QString &url);
     void stopStream();
+    void onSearch(const QString &url);
 
 private slots:
     void onFrameReady(const QImage &image);

@@ -16,6 +16,8 @@
 #include <QLabel>
 #include <stack>
 #include <browserwidget.h>
+#include<indexwidget.h>
+#include<mediawidget.h>
 /* 全局动画时间 */
 const int DURATION = 150;
 
@@ -32,6 +34,13 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();std::stack<int> page;
+    void gotoPage0(QString);
+    void gotoPage1(QString);
+    void gotoPage2(QString);
+    void gotoPage3(QString);
+    void gotoPage4(QString);
+    void gotoPage5(QString);
+
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override; // 添加这一行
@@ -45,8 +54,10 @@ private:
     QPoint dragPosition;
 
     /* 其他页面 */
-    QWidget *naviWidget,  *chatWidget, *mediaWidget, *settingWidget,*indexWidget;
+    QWidget *naviWidget,  *chatWidget,  *settingWidget;
     browserWidget * browserWidget;
+    indexWidget *indexWidget;
+    mediaWidget *mediaWidget;
 
     /* 页面栈 */
 
@@ -58,8 +69,9 @@ protected:
     void mouseMoveEvent(QMouseEvent *event) override; /* 鼠标移动 */
 
     /* 页面管理 */
-    void pushPage(int index); /* 压入页面 */
+
     void popPage(); /* 上一页 */
+    void pushPage(int index); /* 压入页面 */
 
 public:
     /* 图片处理相关 */

@@ -2,7 +2,7 @@
 #define INDEXWIDGET_H
 
 #include <QWidget>
-#include "widget.h"
+// #include "widget.h"
 #include <weatherdata.h>
 #include <QCompleter>
 

@@ -41,8 +41,12 @@ public:
     browserWidget(QWidget *parent = nullptr);
     void sendMessageToLLM(QNetworkAccessManager *manager,QString question);
     void setGradient(QWidget *a, QColor start, QColor end, int duration, QString extra);
+    void MessageFilter(QString inp);
 signals:
     void messageReceived(QString result);
+    void weatherReceived(QString result);
+    void videoUrlReceived(QString result);
+
 
 private slots:
     void navigateToUrl();

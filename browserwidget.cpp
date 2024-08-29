@@ -155,7 +155,100 @@ void browserWidget::sendMessageToLLM(QNetworkAccessManager *manager, QString que
 
     QJsonObject userMessage{
         {"role", "user"},
-        {"content", "请直接使用一个网址回答我的问题，保证网址是中国的合法网站." + question}
+        {"content", "请直接使用一个网址回答我的问题，保证网址是中国的合法网站.如果问题与天气相关，请直接回答以\"http://t.weather.itboy.net/api/weather/city/\""
+                    "开始，后跟表示城市的九位整数的网址，如http://t.weather.itboy.net/api/weather/city/101011000.城市代码如下:"+QString(R"(
+{
+  "citys": [
+    {
+      "city": "北京",
+      "code": "101010100"
+    },
+    {
+      "city": "朝阳",
+      "code": "101010300"
+    },
+    {
+      "city": "顺义",
+      "code": "101010400"
+    },
+    {
+      "city": "怀柔",
+      "code": "101010500"
+    },
+    {
+      "city": "通州",
+      "code": "101010600"
+    },
+    {
+      "city": "昌平",
+      "code": "101010700"
+    },
+    {
+      "city": "延庆",
+      "code": "101010800"
+    },
+    {
+      "city": "丰台",
+      "code": "101010900"
+    },
+    {
+      "city": "石景山",
+      "code": "101011000"
+    },
+    {
+      "city": "大兴",
+      "code": "101011100"
+    },
+    {
+      "city": "房山",
+      "code": "101011200"
+    },
+    {
+      "city": "密云",
+      "code": "101011300"
+    },
+    {
+      "city": "门头沟",
+      "code": "101011400"
+    },
+    {
+      "city": "平谷",
+      "code": "101011500"
+    },
+    {
+      "city": "八达岭",
+      "code": "101011600"
+    },
+    {
+      "city": "佛爷顶",
+      "code": "101011700"
+    },
+    {
+      "city": "汤河口",
+      "code": "101011800"
+    },
+    {
+      "city": "密云上甸子",
+      "code": "101011900"
+    },
+    {
+      "city": "斋堂",
+      "code": "101012000"
+    },
+    {
+      "city": "霞云岭",
+      "code": "101012100"
+    },
+    {
+      "city": "北京城区",
+      "code": "101012200"
+    },
+    {
+      "city": "海淀",
+      "code": "101010200"
+    }
+  ]
+})")+QString(R"(如果和视频相关，则根据主题直接输出一个可以在线上传并播放 .mp4 视频文件的直接网址。该网站必须以.mp4结尾。例子:主题和海洋相关时，直接输出http://vjs.zencdn.net/v/oceans.mp4 .视频和母亲相关，输出http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4.保证网址以.mp4结尾，内容可播放)")+"下面是我的问题:" + question}
     };
 
     QJsonArray messagesArray;
@@ -202,12 +295,29 @@ void browserWidget::sendMessageToLLM(QNetworkAccessManager *manager, QString que
         } else {
             qDebug() << "Request failed:" << reply->errorString();
         }
-
-        emit messageReceived(result); // 发射信号传递结果
+        MessageFilter(result);
+        // emit messageReceived(result); // 发射信号传递结果
         reply->deleteLater(); // 释放资源
     });
 }
-
+void browserWidget::MessageFilter(const QString inp){
+    QRegularExpression regex("\\d{9}$");
+    QRegularExpressionMatch match = regex.match(inp);
+    if(match.hasMatch()){
+        ui->lineEdit->setText("已为您更新今日天气,请查看!");
+        emit weatherReceived(inp);
+        return ;
+    }
+    regex = QRegularExpression(".mp4$");
+    match = regex.match(inp);
+    if(match.hasMatch()){
+        ui->lineEdit->setText("已为您更新视频,请查看流媒体播放器!");
+        emit videoUrlReceived(inp);
+        return ;
+    }
+    emit messageReceived(inp);
+    return;
+}
 
 // void browserWidget::sendMessageToLLM(QNetworkAccessManager *manager,QString question)
 // {
