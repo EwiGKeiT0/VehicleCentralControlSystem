@@ -14,6 +14,17 @@
         <file>search.png</file>
         <file>setting.png</file>
         <file>setting1.png</file>
+        <file>leftIcon.png</file>
+        <file>leftIcon.svg</file>
+        <file>musicEntry.png</file>
+        <file>pauseIcon.png</file>
+        <file>pictureEntry.png</file>
+        <file>playIcon.png</file>
+        <file>playIcon.svg</file>
+        <file>rightIcon.svg</file>
+        <file>videoEntry.png</file>
+        <file>inBack.png</file>
+        <file>flowEntry.png</file>
     </qresource>
     <qresource prefix="/profile">
         <file>profile0.png</file>
@@ -45,5 +56,10 @@
     </qresource>
     <qresource prefix="/cityname">
         <file>cityname.txt</file>
+    </qresource>
+    <qresource prefix="/playList">
+        <file>musicPlayList.txt</file>
+        <file>picturePlayList.txt</file>
+        <file>videoPlayList.txt</file>
     </qresource>
 </RCC>

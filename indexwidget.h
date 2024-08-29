@@ -2,6 +2,7 @@
 #define INDEXWIDGET_H
 
 #include <QWidget>
+#include "widget.h"
 #include <weatherdata.h>
 #include <QCompleter>
 
@@ -54,7 +55,6 @@ public:
 
     //解析天气数据方法
     void parse_weatherdata();
-
 
     //解析日期方法
     QString parse_date(QString pre_date);

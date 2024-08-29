@@ -3,6 +3,7 @@
 #include<QWidget>
 #include<QPainter>
 #include<vector>
+#include<bits/stdc++.h>
 #include<calculatepath.h>
 #include<QPointF>
 #include<qpair.h>

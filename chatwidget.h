@@ -63,7 +63,7 @@ private slots:
 private:
     const int textOffset = 27;
     const QString myName = "User1";
-    const QString serverIp = "10.194.156.111";
+    const QString serverIp = "10.194.159.168";
     const int serverPort = 8887;
 
     Ui::chatWidget *ui;

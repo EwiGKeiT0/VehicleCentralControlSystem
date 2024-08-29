@@ -15,7 +15,6 @@
 #include <QPixMap>
 #include <QLabel>
 #include <stack>
-#include "indexwidget.h"
 #include <browserwidget.h>
 /* 全局动画时间 */
 const int DURATION = 150;
@@ -46,8 +45,7 @@ private:
     QPoint dragPosition;
 
     /* 其他页面 */
-    QWidget *naviWidget,  *chatWidget, *mediaWidget, *settingWidget;
-    indexWidget *indexWidget;
+    QWidget *naviWidget,  *chatWidget, *mediaWidget, *settingWidget,*indexWidget;
     browserWidget * browserWidget;
 
     /* 页面栈 */

@@ -78,7 +78,6 @@ browserWidget::~browserWidget()
 }
 
 // // 槽函数：导航到地址栏中的网址
-
 void browserWidget::navigateToUrl()
 {
     // QString url = ui->lineEdit->text();

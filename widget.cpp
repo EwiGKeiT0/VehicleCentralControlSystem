@@ -68,7 +68,7 @@ Widget::Widget(QWidget *parent)
     ui->mainWidget->addWidget(mediaWidget);
     ui->mainWidget->addWidget(settingWidget);
 
-    connect(this->browserWidget,&browserWidget::messageReceived,this->indexWidget,&indexWidget::parse_weatherdata2);
+    // connect(this->browserWidget,&browserWidget::messageReceived,this->indexWidget,&indexWidget::parse_weatherdata2);
 
     pushPage(0);
     button[0]->setPixmap(pixmap[0][1]);
