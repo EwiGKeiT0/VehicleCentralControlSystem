@@ -248,7 +248,8 @@ void browserWidget::sendMessageToLLM(QNetworkAccessManager *manager, QString que
       "code": "101010200"
     }
   ]
-})")+QString(R"(如果和视频相关，则根据主题直接输出一个可以在线上传并播放 .mp4 视频文件的直接网址。该网站必须以.mp4结尾。例子:主题和海洋相关时，直接输出http://vjs.zencdn.net/v/oceans.mp4 .视频和母亲相关，输出http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4.保证网址以.mp4结尾，内容可播放)")+"下面是我的问题:" + question}
+})")+QString(R"(如果和视频相关，则根据主题直接输出一个可以在线上传并播放 .mp4 视频文件的直接网址。该网站必须以.mp4结尾。例子:主题和海洋相关时，直接输出http://vjs.zencdn.net/v/oceans.mp4 .视频和母亲相关，输出http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4.保证网址以.mp4结尾，内容可播放.
+如果内容和餐厅有关或者表达了饥饿、想去餐厅的情感，输出的字符串必须以".canteen"结尾。)")+"下面是我的问题:" + question}
     };
 
     QJsonArray messagesArray;
@@ -313,6 +314,13 @@ void browserWidget::MessageFilter(const QString inp){
     if(match.hasMatch()){
         ui->lineEdit->setText("已为您更新视频,请查看流媒体播放器!");
         emit videoUrlReceived(inp);
+        return ;
+    }
+    regex = QRegularExpression(".canteen$");
+    match = regex.match(inp);
+    if(match.hasMatch()){
+        ui->lineEdit->setText("已为您更新导航路线，请查看地图!");
+        emit goToCanteenReceived(inp);
         return ;
     }
     emit messageReceived(inp);

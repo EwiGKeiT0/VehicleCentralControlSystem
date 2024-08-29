@@ -157,8 +157,8 @@ NaviWidget::NaviWidget(QWidget *parent, Widget *father)
 }
 void NaviWidget::pop_path_front()
 {
-    if(mainWindow->page.top()!=0)
-        return;
+    // if(mainWindow->page.top()!=0)
+    //     return;
     qDebug()<<"update rawRes";
     if(!(this->calcRes->rawRes.empty())){
         // qDebug()<<calcRes->rawRes.size();
@@ -195,6 +195,7 @@ void NaviWidget::pop_path_front()
             ui->mapWidget->isMouseEndPointSet=0;
             ui->mapWidget->isMouseStartPointSet=0;
             QPair<double,double> stp= ui->mapWidget->mapRealPos(ui->mapWidget->mouseStartPoint.first,ui->mapWidget->mouseStartPoint.second);
+            // qDebug()<<"st:"<<stp.first<<" "<<stp.second;//bei 116.163   39.73
             QPair<double,double> enp= ui->mapWidget->mapRealPos(ui->mapWidget->mouseEndPoint.first,ui->mapWidget->mouseEndPoint.second);
             pathLength = calcRes->findPath(stp.first,stp.second,
                               enp.first,enp.second);
@@ -206,8 +207,6 @@ void NaviWidget::pop_path_front()
             }
         }
     ui->mapWidget->setPath(calcRes->rawRes);
-
-
 }
 void NaviWidget::init(){
     qDebug()<<"init";
@@ -607,5 +606,11 @@ void NaviWidget::on_pushButton_2_clicked()
 {
     qDebug()<<"pushButton2Clicked";
     ui->mapWidget->isMouseSetting=2;
+}
+
+void NaviWidget::justGoToCanteen(QString)
+{
+    if(this->calcRes->rawRes.size())
+        this->calcRes->findPath(this->calcRes->rawRes.back().first,this->calcRes->rawRes.back().second,116.163,39.73);
 }
 

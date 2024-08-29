@@ -1,6 +1,6 @@
 #ifndef NAVIWIDGET_H
 #define NAVIWIDGET_H
-#include<widget.h>
+// #include<widget.h>
 #include<painterWidget.h>
 #include <QRandomGenerator>
 #include <QMainWindow>
@@ -18,7 +18,7 @@
 namespace Ui {
 class NaviWidget;
 }
-
+class Widget;
 class NaviWidget : public QWidget
 {
     Q_OBJECT
@@ -30,6 +30,7 @@ public:
     CalculatePath* calcRes;
 
     void setGradient(QWidget *a, QColor start, QColor end, int DURATION, QString extra="");
+    void justGoToCanteen(QString);
 private slots:
     //处理获取外网ip请求的 槽
     void onGetIp(QNetworkReply*);
@@ -54,6 +55,7 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
 
 private:
     Widget *mainWindow;

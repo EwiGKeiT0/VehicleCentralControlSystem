@@ -18,6 +18,7 @@
 #include <browserwidget.h>
 #include<indexwidget.h>
 #include<mediawidget.h>
+#include<naviwidget.h>
 /* 全局动画时间 */
 const int DURATION = 150;
 
@@ -54,10 +55,11 @@ private:
     QPoint dragPosition;
 
     /* 其他页面 */
-    QWidget *naviWidget,  *chatWidget,  *settingWidget;
+    QWidget *chatWidget,  *settingWidget;
     browserWidget * browserWidget;
     indexWidget *indexWidget;
     mediaWidget *mediaWidget;
+    NaviWidget *naviWidget;
 
     /* 页面栈 */
 

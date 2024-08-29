@@ -74,6 +74,8 @@ Widget::Widget(QWidget *parent)
     connect(this->browserWidget,&browserWidget::weatherReceived,this,&Widget::gotoPage2);
     connect(this->browserWidget,&browserWidget::videoUrlReceived,this->mediaWidget,&mediaWidget::onSearch);
     connect(this->browserWidget,&browserWidget::videoUrlReceived,this,&Widget::gotoPage4);
+    connect(this->browserWidget,&browserWidget::goToCanteenReceived,this->naviWidget,&NaviWidget::justGoToCanteen);
+    connect(this->browserWidget,&browserWidget::goToCanteenReceived,this,&Widget::gotoPage0);
 
     pushPage(0);
     button[0]->setPixmap(pixmap[0][1]);

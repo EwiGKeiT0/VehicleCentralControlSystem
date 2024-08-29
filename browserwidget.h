@@ -46,6 +46,7 @@ signals:
     void messageReceived(QString result);
     void weatherReceived(QString result);
     void videoUrlReceived(QString result);
+    void goToCanteenReceived(QString result);
 
 
 private slots:
