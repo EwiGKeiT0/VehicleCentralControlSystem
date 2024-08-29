@@ -3,6 +3,7 @@
 #include<vector>
 #include<map>
 #include<queue>
+#include<bits/stdc++.h>
 #include<QDebug>
 using namespace std;
 double calcdis(pair<double,double>p1,pair<double,double>p2);

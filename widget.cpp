@@ -4,7 +4,6 @@
 #include "colorgradient.h"
 #include "multiWidget.h"
 
-
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
@@ -59,7 +58,7 @@ Widget::Widget(QWidget *parent)
     browserWidget = new class browserWidget(this, this);
     indexWidget = new class indexWidget(this, this);
     chatWidget = new class chatWidget(this, this);
-    mediaWidget = new class mediaWidget(this,this);
+    mediaWidget = new class mediaWidget(this, this);
     settingWidget = new class settingWidget(this, this);
 
     ui->mainWidget->addWidget(naviWidget);

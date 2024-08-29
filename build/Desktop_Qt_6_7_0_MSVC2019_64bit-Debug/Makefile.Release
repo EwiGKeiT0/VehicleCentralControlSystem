@@ -5696,6 +5696,15 @@ release\browserwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSyste
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\hovereventfilter.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\colorgradient.h \
 		ui_browserwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QSpacerItem \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QNetworkProxyFactory \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qnetworkproxy.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qhostaddress.h \
@@ -5703,8 +5712,7 @@ release\browserwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSyste
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qnetworkrequest.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QSharedDataPointer \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QString \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QUrl \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QUrl
 
 release\calculatepath.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\calculatepath.cpp E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\calculatepath.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QDebug \
@@ -6149,7 +6157,12 @@ release\chatwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_p
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QTcpServer \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qtcpserver.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\QPixmap \
-		ui_chatwidget.h
+		ui_chatwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\QIcon \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout
 
 release\colorgradient.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\colorgradient.cpp E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\colorgradient.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QObject \
@@ -7506,6 +7519,11 @@ release\indexwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCharts\QSplineSeries \
 		ui_indexwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QGridLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QLineEdit \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QNetworkRequest \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QNetworkReply \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qnetworkreply.h \
@@ -7944,7 +7962,35 @@ release\mainwindow.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_p
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\qlocale.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qguiapplication_platform.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qtabwidget.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QCheckBox \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QMenuBar \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qmenubar.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qmenu.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QRadioButton \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qradiobutton.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QStatusBar \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstatusbar.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QTextEdit \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qtextedit.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextdocument.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextoption.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextcursor.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextformat.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qpen.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QWidget
 
 release\mediawidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\mediawidget.cpp E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\mediawidget.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QWidget \
@@ -8469,7 +8515,12 @@ release\mediawidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\ffmpeglib\include\libswresample\swresample.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\ffmpeglib\include\libswresample\version_major.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\ffmpeglib\include\libswresample\version.h \
-		ui_mediawidget.h
+		ui_mediawidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QLineEdit \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlineedit.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QListWidget
 
 release\naviwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\naviwidget.cpp E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\naviwidget.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\widget.h \
@@ -8742,6 +8793,17 @@ release\naviwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_p
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\hovereventfilter.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\colorgradient.h \
 		ui_naviwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QLineEdit \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlineedit.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextcursor.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextformat.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QTextBrowser \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qtextbrowser.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qtextedit.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\painterwidget.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QHostInfo \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qhostinfo.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QNetworkInterface \
@@ -9194,7 +9256,16 @@ release\settingwidget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSyste
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QTimer \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\qtimer.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\qbasictimer.h \
-		ui_settingwidget.h
+		ui_settingwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QSpacerItem \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qgridlayout.h
 
 release\streamthread.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\streamthread.cpp E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\streamthread.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QThread \
@@ -10407,6 +10478,18 @@ release\widget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_playe
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qpicture.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\qtextdocument.h \
 		ui_widget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QSpacerItem \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QStackedWidget \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstackedwidget.h \
+		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\hovereventfilter.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\colorgradient.h \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\multiWidget.h \
@@ -10429,7 +10512,6 @@ release\widget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_playe
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QSharedDataPointer \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QString \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QUrl \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QVariant \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\QSslConfiguration \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qsslconfiguration.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtNetwork\qsslsocket.h \
@@ -10697,11 +10779,6 @@ release\widget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_playe
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qaction.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qactiongroup.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtGui\QActionGroup \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayout.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qbuttongroup.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qcalendarwidget.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qcheckbox.h \
@@ -10777,7 +10854,6 @@ release\widget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_playe
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qsplashscreen.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qsplitter.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstackedlayout.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstackedwidget.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstatusbar.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\qstylefactory.h \
@@ -11012,7 +11088,6 @@ release\widget.obj: E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_playe
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetsglobal.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetsexports.h \
-		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\streamthread.h \
 		E:\QT\QT_main\6.7.0\msvc2019_64\include\QtCore\QMutexLocker \
 		E:\BIT_SoftwareEngineering\VehicleCentralControlSystem_player\VehicleCentralControlSystem\audiostreamthread.h \
