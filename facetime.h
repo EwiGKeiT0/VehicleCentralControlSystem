@@ -26,6 +26,7 @@ private:
     QDialog *vDialog;
     QString ip;
     int port;
+    QThread *thread;
 };
 
 

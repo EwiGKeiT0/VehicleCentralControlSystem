@@ -11,11 +11,12 @@ VideoEncoderThread::VideoEncoderThread(QObject *parent, QString serverIp, int se
     , ip(serverIp)
     , port(serverPort)
 {
-    camera = new QCamera();
-    captureSession = new QMediaCaptureSession();
-    videoSink = new QVideoSink();
-    tcpSocket = new QTcpSocket();
+    camera = new QCamera(this);
+    captureSession = new QMediaCaptureSession(this);
+    videoSink = new QVideoSink(this);
+    tcpSocket = new QTcpSocket(this);
     tcpSocket->connectToHost(ip, port);
+    tcpSocket->setSocketOption(QAbstractSocket::ReceiveBufferSizeSocketOption, 64 * 1024 * 1024);
 
     captureSession->setCamera(camera);
     captureSession->setVideoSink(videoSink);
@@ -55,7 +56,7 @@ void VideoEncoderThread::run() {
     qDebug() << "Camera started, encoding in progress...";
 
     while (isEncoding) {
-        QThread::msleep(10); // 控制帧率
+        QThread::msleep(30); // 控制帧率
     }
 
     cleanup();
@@ -235,17 +236,12 @@ void VideoEncoderThread::cleanup() {
     if (tcpSocket) {
         tcpSocket->disconnectFromHost();
         tcpSocket->close();
-        delete tcpSocket;
-        tcpSocket = nullptr;
     }
-
     if (codecContext) {
         avcodec_free_context(&codecContext);
     }
-
     if (swsContext) {
         sws_freeContext(swsContext);
     }
-
     camera->stop();
 }

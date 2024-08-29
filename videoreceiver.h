@@ -12,10 +12,13 @@ class VideoReceiver : public QObject
 
 public:
     VideoReceiver(QObject *parent = nullptr, QString serverIp = "127.0.0.1", int serverPort = 8889);
+    ~VideoReceiver();
     void startListening();  // 开始监听TCP连接并接收视频流
+    void closeTcpConnect();
 
 signals:
     void frameReceived(const QPixmap &pixmap);  // 信号：接收到新的视频帧
+    void shouldClose();
 
 private slots:
     void onReadyRead();  // 当有数据可读时的槽函数

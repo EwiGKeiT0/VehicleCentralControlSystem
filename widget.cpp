@@ -90,26 +90,32 @@ Widget::~Widget()
 void Widget::gotoPage0(QString x)
 {
     pushPage(0);
+    button[0]->setPixmap(pixmap[0][1]);
 }
 void Widget::gotoPage1(QString x)
 {
     pushPage(1);
+    button[1]->setPixmap(pixmap[1][1]);
 }
 void Widget::gotoPage2(QString x)
 {
     pushPage(2);
+    button[2]->setPixmap(pixmap[2][1]);
 }
 void Widget::gotoPage3(QString x)
 {
     pushPage(3);
+    button[3]->setPixmap(pixmap[3][1]);
 }
 void Widget::gotoPage4(QString x)
 {
     pushPage(4);
+    button[4]->setPixmap(pixmap[4][1]);
 }
 void Widget::gotoPage5(QString x)
 {
     pushPage(5);
+    button[5]->setPixmap(pixmap[5][1]);
 }
 
 // TabBuilder控制器

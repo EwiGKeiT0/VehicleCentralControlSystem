@@ -12,6 +12,18 @@ int mediaMode=0; //播放模式，0:音乐,1:视频,2:图片
 QString mediaUrls[2005];
 int playListContent=0;
 void mediaWidget::onSearch(const QString &url){
+
+    mediaMode=3;//切换mode
+    ui->musicEntry->hide();
+    ui->pictureEntry->hide();
+    ui->videoEntry->hide();
+    ui->flowEntry->hide();
+
+    ui->backButton->show();
+    ui->flowStart->show();
+    ui->flowStop->show();
+    ui->flowRenderer->show();
+    ui->flowInput->show();
     startStream(url);
 }
 mediaWidget::mediaWidget(QWidget *parent,Widget *father)

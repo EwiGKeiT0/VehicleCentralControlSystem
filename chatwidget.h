@@ -27,7 +27,7 @@ class userButton : public QPushButton
 public:
     explicit userButton(QWidget *parent, QString userName, QPixmap userProfile);
     ~userButton();
-    void setGradient(QColor start, QColor end, int DURATION);
+    void setGradient(QColor start, QColor end, int duration);
     QPropertyAnimation *animation;
     bool selected;
     std::vector<std::pair<userButton*,QString>> messages;
@@ -62,7 +62,7 @@ private slots:
 
 private:
     const int textOffset = 27;
-    const QString myName = "User1";
+    const QString myName = "User0";
     const QString serverIp = "10.194.159.168";
     const int serverPort = 8887;
 
@@ -77,10 +77,9 @@ private:
     QString fileName, fileSender;
     qint64 fileSize, fileReceivedSize;
     QFile file;
+    bool CONNECTED = false;
 
     std::vector<FaceTime*> faceTime;
-
-    FaceTime *test;
 };
 
 class keyboardEventfilter : public QObject

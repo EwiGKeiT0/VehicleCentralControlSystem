@@ -7,23 +7,32 @@ FaceTime::FaceTime(QObject *parent, QDialog *videoDialog,
     , vThread(videoEncoderThread)
     , vReceiver(videoReceiver)
 {
-    videoDialog->show();
+    vDialog->show();
+
+
+    thread = new QThread;
+    vReceiver->moveToThread(thread);
+    connect(vReceiver, &VideoReceiver::frameReceived, this, &FaceTime::frameReceived);
+    connect(vDialog, &QDialog::rejected, this, &FaceTime::dialogClose);
+
     vThread->startEncoding();
-    connect(videoReceiver, &VideoReceiver::frameReceived, this, &FaceTime::frameReceived);
-    connect(vDialog, &QDialog::finished, this, &FaceTime::dialogClose);
+    thread->start();
+    vReceiver->startListening();
 }
 
 FaceTime::~FaceTime()
 {
+    vDialog->close();
     dialogClose();
 }
 
 void FaceTime::dialogClose()
 {
-    vDialog->close();
-    delete vThread;
-    delete vReceiver;
-    delete vDialog;
+    qDebug() << "Dialog closed.";
+    vReceiver->closeTcpConnect();
+    thread->quit();
+    thread->wait();
+    vThread->stopEncoding();
 }
 
 void FaceTime::frameReceived(const QPixmap &pixmap)

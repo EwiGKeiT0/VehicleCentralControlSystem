@@ -52,9 +52,9 @@ chatWidget::chatWidget(QWidget *parent, Widget *father)
 
     ui->userName->setText(currentUser->name);
 
-    mainWidget->setGradient(ui->sendButton, QColor(176, 224, 230), QColor(19, 145, 255), 150);
-    mainWidget->setGradient(ui->fileButton, QColor(36, 36, 42), QColor(76, 76, 82), 150);
-    mainWidget->setGradient(ui->videoButton, QColor(36, 36, 42), QColor(76, 76, 82), 150);
+    mainWidget->setGradient(ui->sendButton, QColor(176, 224, 230), QColor(19, 145, 255), DURATION);
+    mainWidget->setGradient(ui->fileButton, QColor(36, 36, 42), QColor(76, 76, 82), DURATION);
+    mainWidget->setGradient(ui->videoButton, QColor(36, 36, 42), QColor(76, 76, 82), DURATION);
 
     myProfile = QPixmap(QString(":/profile/profile%1.png").arg(myName[4]));
     myProfile = mainWidget->getPixmapWithBorderRadius(myProfile.scaled(QSize(40, 40), Qt::KeepAspectRatio, Qt::SmoothTransformation), 10);
@@ -75,14 +75,10 @@ chatWidget::chatWidget(QWidget *parent, Widget *father)
     connect(tcpSocket, &QTcpSocket::connected, this, [this](){
         QString sizeANDmsg = QString("%1:%2").arg(myName.size()).arg(myName);
         tcpSocket->write(sizeANDmsg.toUtf8().data());
+        CONNECTED = true;
     });
 
     connect(tcpSocket, &QTcpSocket::readyRead, this, &chatWidget::receiveMessage);
-
-    // QDialog *dialog = new QDialog();
-    // VideoEncoderThread *videoThread = new VideoEncoderThread(nullptr, serverIp, serverPort + 1);
-    // VideoReceiver *videoReceiver = new VideoReceiver(nullptr, serverIp, serverPort + 1);
-    // test = new FaceTime(nullptr, dialog, videoThread, videoReceiver);
 }
 
 std::pair<int, int> chatWidget::getBubbleSize(QString &str)
@@ -130,7 +126,7 @@ QWidget* chatWidget::getBubble(QPixmap profile, QString str, int type)
     pf->setStyleSheet("padding:0px;");
 
     QLabel *message = new QLabel(bubble);
-    mainWidget->setGradient(message, QColor(100, 100, 100), QColor(140, 140, 140), 150);
+    mainWidget->setGradient(message, QColor(100, 100, 100), QColor(140, 140, 140), DURATION);
     if (type == 0)
         message->setGeometry(780 - width, 0, width, height);
     else
@@ -138,11 +134,11 @@ QWidget* chatWidget::getBubble(QPixmap profile, QString str, int type)
     message->setText(str);
     message->setTextInteractionFlags(Qt::TextSelectableByMouse);
 
-    QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect;
-    shadowEffect->setOffset(0, 0);
-    shadowEffect->setBlurRadius(15);
-    shadowEffect->setColor(QColor(10, 10, 10));
-    bubble->setGraphicsEffect(shadowEffect);
+    // QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect;
+    // shadowEffect->setOffset(0, 0);
+    // shadowEffect->setBlurRadius(15);
+    // shadowEffect->setColor(QColor(10, 10, 10));
+    // bubble->setGraphicsEffect(shadowEffect);
 
     return bubble;
 }
@@ -217,11 +213,11 @@ bool chatWidget::eventFilter(QObject *obj, QEvent *event)
     return QObject::eventFilter(obj, event);
 }
 
-void userButton::setGradient(QColor start, QColor end, int DURATION)
+void userButton::setGradient(QColor start, QColor end, int duration)
 {
     ColorGradient *color = new ColorGradient(start, end);
     animation = new QPropertyAnimation(color, "gradient");
-    animation->setDuration(150);
+    animation->setDuration(duration);
     animation->setStartValue(0);
     animation->setEndValue(1);
     QObject::connect(color, &ColorGradient::gradientChanged, this,
@@ -260,7 +256,7 @@ userButton::userButton(QWidget *parent, QString userName, QPixmap userProfile)
     setFixedSize(QSize(250, 100));
     setIcon(profile);
     setIconSize(QSize(70, 70));
-    setGradient(QColor(150, 150, 150), QColor(170, 170, 170), 150);
+    setGradient(QColor(150, 150, 150), QColor(170, 170, 170), DURATION);
     selected = false;
 }
 
@@ -473,7 +469,9 @@ void chatWidget::receiveMessage()
             QDialog *dialog = new QDialog();
             VideoEncoderThread *videoThread = new VideoEncoderThread(nullptr, serverIp, serverPort + sign);
             VideoReceiver *videoReceiver = new VideoReceiver(nullptr, serverIp, (serverPort + sign) ^ 1);
-            faceTime.push_back(new FaceTime(nullptr, dialog, videoThread, videoReceiver));
+
+            if (CONNECTED)
+                faceTime.push_back(new FaceTime(nullptr, dialog, videoThread, videoReceiver));
         } else
         if (buffer.left(5) == "GROUP")
         {
