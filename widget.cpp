@@ -167,6 +167,16 @@ void Widget::paintEvent(QPaintEvent *event)
     painter.drawRoundedRect(rect, 10, 10);
     rect.setRect(ui->tabWidget->pos().x() + rect.width() - 10, ui->tabWidget->pos().y(), 10, rect.height());
     painter.drawRect(rect);
+    for(qreal i = 0, base = 0; i < 10; i += base, base += 0.05)
+    {
+        QRect shadow(10-i, 10-i, width()-(10-i)*2, height()-(10-i)*2);
+        QColor color = Qt::black;
+        int alpha = 10;
+        color.setAlpha(alpha);
+        painter.setPen(color);
+        painter.setBrush(Qt::NoBrush);
+        painter.drawRoundedRect(shadow, 10, 10);
+    }
     QWidget::paintEvent(event);
 }
 
